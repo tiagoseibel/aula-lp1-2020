@@ -23,6 +23,15 @@ public class ClienteBean {
 
    public void save() {
       repository.save(cliente);
+      this.cliente = new Cliente();
+   }
+
+   public void select(Cliente cli) {
+      this.cliente = cli;
+   }
+
+   public void delete(Cliente cli) {
+      repository.delete(cli);
    }
 
    public Cliente getCliente() {
