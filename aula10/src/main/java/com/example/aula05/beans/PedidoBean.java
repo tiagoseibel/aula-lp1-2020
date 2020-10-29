@@ -24,7 +24,6 @@ public class PedidoBean {
    public void save() {
       repository.save(pedido);
       this.pedido = new Pedido();
-      this.pedidos = repository.findAll();
    }
 
    public Pedido getPedido() {

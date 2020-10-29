@@ -21,7 +21,7 @@
 
          <h:outputLabel value="Data pedido:" />
          <h:inputText value="#{pedidoBean.pedido.datapedido}">
-            <f:convertDateTime pattern="dd/MM/yyyy"/>
+            <f:convertDateTime type="localDate" pattern="dd/MM/yyyy"/>
          </h:inputText>
 
          <h:outputLabel value="Descrição:" />
@@ -41,7 +41,7 @@
 
          <p:column headerText="Data do pedido">
             <h:outputText value="#{item.datapedido}">
-               <f:convertDateTime pattern="dd/MM/yyyy"/>
+               <f:convertDateTime type="localDate" pattern="dd/MM/yyyy"/>
             </h:outputText>
          </p:column>
 

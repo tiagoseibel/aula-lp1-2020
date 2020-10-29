@@ -2,6 +2,7 @@ package com.example.aula05.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +18,7 @@ public class Pedido {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Integer id;
 
-   @ManyToOne
+   @ManyToOne(cascade = CascadeType.ALL)
    @JoinColumn(name = "cliente_id")
    private Cliente cliente;
    
